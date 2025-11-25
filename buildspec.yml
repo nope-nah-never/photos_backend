@@ -7,11 +7,11 @@ phases:
     commands:
       - echo "=== Installing dependencies for index-photos ==="
       - cd index-photos
-      - if [ -f requirements.txt ]; then python -m pip install -r requirements.txt -t .; fi
+      - python -m pip install -r requirements.txt -t .
       - cd ..
       - echo "=== Installing dependencies for search-photos ==="
       - cd search-photos
-      - if [ -f requirements.txt ]; then python -m pip install -r requirements.txt -t .; fi
+      - python -m pip install -r requirements.txt -t .
       - cd ..
   build:
     commands:
