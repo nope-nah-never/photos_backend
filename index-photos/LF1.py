@@ -89,7 +89,14 @@ def getLabels(bucket: str, key: str):
     """Get labels from Rekognition"""
     try:
         response = rekognition.detect_labels(
-            Image={"S3Object": {"Bucket": bucket, "Name": key}, limit=10}
+            Image={
+                "S3Object": 
+                    {
+                        "Bucket": bucket, 
+                        "Name": key
+                    }
+                }, 
+            MaxLabels = 10
         )
         logging.info(f"Rekognition response: {response}")
         rk_labels = [label["Name"] for label in response["Labels"]]
