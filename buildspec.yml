@@ -24,11 +24,11 @@ phases:
       - zip -r ../search-photos.zip .
       - cd ..
   post_build:
-  commands:
-    - echo "=== Deploying index-photos Lambda ==="
-    - aws lambda update-function-code --function-name index-photos --zip-file fileb://index-photos.zip
-    - echo "=== Deploying search-photos Lambda ==="
-    - aws lambda update-function-code --function-name search-photos --zip-file fileb://search-photos.zip
+    commands:
+      - echo "=== Deploying index-photos Lambda ==="
+      - aws lambda update-function-code --function-name index-photos --zip-file fileb://index-photos.zip
+      - echo "=== Deploying search-photos Lambda ==="
+      - aws lambda update-function-code --function-name search-photos --zip-file fileb://search-photos.zip
 
 
 artifacts:
