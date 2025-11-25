@@ -11,7 +11,7 @@ phases:
       - cd ..
       - echo "=== Installing dependencies for search-photos ==="
       - cd search-photos
-      - then python -m pip install -r requirements.txt -t .
+      - python -m pip install -r requirements.txt -t .
       - cd ..
   build:
     commands:
