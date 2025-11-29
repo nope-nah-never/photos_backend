@@ -96,7 +96,7 @@ def getLabels(bucket: str, key: str):
                         "Name": key
                     }
                 }, 
-            MaxLabels = 10
+            MaxLabels = 20
         )
         logging.info(f"Rekognition response: {response}")
         rk_labels = [label["Name"] for label in response["Labels"]]
